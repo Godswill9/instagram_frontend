@@ -122,7 +122,7 @@ secondButton.addEventListener("click", (e) => {
     if (obj.items[0].carousel_media) {
       fileType = "reels";
       arr = extractFromArr(obj.items[0].carousel_media);
-      sendReelDetails(arr, "downloadReel");
+      sendReelDetails(arr, "downloadReelPrivate");
     } else if (!obj.items[0].video_versions) {
       fileType = "image";
       file = obj.items[0]?.image_versions2?.candidates[0]?.url;
@@ -229,7 +229,7 @@ function extractFromArr2(arr) {
 const sendReelDetails = (file, route) => {
   //   fetch(`https://instagram-downloader.onrender.com/api/${route}`, {
   // fetch(`http://localhost:8088/api/${route}`, {
-  fetch(`https://instagram-backend-kcm3.onrender.com/api/${route}`, {
+  fetch(`https://instagram-backend-237l.onrender.com/api/${route}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -266,7 +266,7 @@ const sendReelDetails = (file, route) => {
 const sendDetailsVideo = (url, img, route) => {
   //   fetch(`https://instagram-downloader.onrender.com/api/${route}`, {
   // fetch(`http://localhost:8088/api/${route}`, {
-  fetch(`https://instagram-backend-kcm3.onrender.com/api/${route}`, {
+  fetch(`https://instagram-backend-237l.onrender.com/api/${route}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -302,7 +302,7 @@ const sendDetailsVideo = (url, img, route) => {
 const sendDetailsImages = (url, img, route) => {
   //   fetch(`https://instagram-downloader.onrender.com/api/${route}`, {
   // fetch(`http://localhost:8088/api/${route}`, {
-  fetch(`https://instagram-backend-kcm3.onrender.com/api/${route}`, {
+  fetch(`https://instagram-backend-237l.onrender.com/api/${route}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
