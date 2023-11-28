@@ -14,7 +14,7 @@ const InstagramPhoto = document.querySelector(".Instagram-Photo");
 const InstagramReels = document.querySelector(".Instagram-Reels");
 const Instagramstory = document.querySelector(".Instagram-story");
 const IGTVvideo = document.querySelector(".IGTV-video");
-console.log(download, dropdown);
+// console.log(download, dropdown);
 localStorage.setItem("title", "video");
 var title = localStorage.getItem("title");
 
@@ -131,7 +131,9 @@ noticeButton?.addEventListener("click", () => {
 
 function downloadFile(link, other) {
   if (link.startsWith("http://")) {
-    window.location.href = link; // Opens the link in the current window/tab
+    const trimmedLink = link.replace("http:", "");
+    console.log(trimmedLink);
+    window.location.href = trimmedLink; // Redirects to the secure download link with the trimmed part of the original link
   } else if (link.startsWith("https://")) {
     window.open(link, "_blank"); // Opens the link in a new tab/window
   } else {
